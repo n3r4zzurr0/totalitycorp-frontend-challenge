@@ -1,0 +1,41 @@
+@import 'Common';
+
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  height: 40px;
+  padding: 0 30px 0 0;
+  background: $color-dark-grey;
+
+  .top-nav_item {
+    display: inline-flex;
+    margin: auto 22px;
+    svg {
+      fill: #bbb;
+      height: 18px;
+    }
+    &:nth-child(2) {
+      svg {
+        height: 17px;
+      }
+    }
+    &:nth-child(3) {
+      margin: auto 18px auto 22px;
+      svg {
+        fill: #777;
+        height: 32px;
+      }
+    }
+    &:hover {
+      svg {
+        fill: $color-light-grey;
+      }
+      &:nth-child(3) {
+        svg {
+          fill: #aaa;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+@import 'Common';
+
+.main-nav {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 56px;
+  background: #fff;
+
+  .hamburger-icon {
+    cursor: pointer;
+    display: none;
+    line-height: 14px;
+    margin: 0 0 0 18px;
+    svg {
+      height: 18px;
+    }
+    &:hover {
+      svg {
+        fill: $color-light-red;
+      }
+    }
+    @media only screen and (max-width: 1040px) {
+      display: block;
+    }
+  }
+
+  .main-nav_logo {
+    line-height: 14px;
+    margin: 0 36px 0 66px;
+    svg {
+      height: 24px;
+    }
+    @media only screen and (max-width: 1040px) {
+      margin: 0 36px 0 18px;
+    }
+    @media only screen and (max-width: 768px) {
+      margin: 0 36px 0 6px;
+      svg {
+        max-width: 180px;
+        height: 18px;
+      }
+    }
+  }
+
+  .main-nav_cover {
+    display: flex;
+    height: 100%;
+    @media only screen and (max-width: 1040px) {
+      display: none;
+    }
+  }
+  
+  .main-nav_item {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-dark-grey;
+    margin: 0 24px;
+
+    .main-nav_item_label {
+      cursor: pointer;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      cursor: pointer;
+
+      .main-nav_item_label_chevron {
+        position: absolute;
+        top: 50%;
+        right: -4px;
+        transform: transform(0, -50%);
+        &:before, &:after {
+          border-top: 2px solid #333;
+          height: 2px;
+          width: 9px;
+          content: "";
+          position: absolute;
+          top: 50%;
+          transition: transform .2s, left .2s;
+        }
+        &:before {
+          left: 0;
+          transform: rotate(45deg);
+        }
+        &:after {
+          left: 7px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    .main-nav_item_content_cover {
+      position: absolute;
+      top: 56px;
+      left: -30px;
+      display: flex;
+      padding: 10px 0 0 0;
+
+      .main-nav_item_content {
+        display: flex;
+        height: 0;
+        padding: 0 36px;
+        background: rgba(255, 255, 255, .96);
+        border-radius: 4px;
+        overflow: hidden;
+        transition: height .2s, padding .2s;
+
+        .main-nav_item_content_list {
+          opacity: 0;
+          white-space: nowrap;
+          transition: opacity .2s;
+          &:nth-child(1) {
+            margin: 0 18px 0 0;
+          }
+          &:nth-child(2) {
+            margin: 0 0 0 18px;
+          }
+         
+          .main-nav_item_content_list_title {
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: underline;
+            text-decoration-color: #ddd;
+            text-underline-offset: 10px;
+            margin-bottom: 24px;
+          }
+          
+          .main-nav_item_content_list_item {
+            display: block;
+            margin: 0 0 8px 0;
+            color: #666;
+            font-size: 16px;
+            font-weight: 300;
+            &:hover {
+              color: $color-light-red;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .main-nav_item_content {
+        padding: 24px 36px;
+
+        .main-nav_item_content_list {
+          opacity: 1;
+        }
+      }
+
+      .main-nav_item_label_chevron {
+        &:before, &:after {
+          border-top: 2px solid $color-light-red;
+        }
+        &:before {
+          left: 2px;
+          transform: rotate(-45deg);
+        }
+        &:after {
+          left: 6px;
+          transform: rotate(45deg);
+        }
+      }
+      &:nth-child(1) {
+        .main-nav_item_content {
+          height: 265px;
+        }
+      }
+      &:nth-child(2) {
+        .main-nav_item_content {
+          height: 160px;
+        }
+      }
+      &:nth-child(3), &:nth-child(5) {
+        .main-nav_item_content {
+          height: 245px;
+        }
+      }
+      &:nth-child(4) {
+        .main-nav_item_content {
+          height: 215px;
+        }
+      }
+      .main-nav_item_label {
+        color: $color-light-red;
+      }
+    }
+  }
+}

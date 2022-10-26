@@ -1,0 +1,66 @@
+@import 'Common';
+
+.banner-bottom {
+  position: relative;
+  margin: 60px 0 0 0;
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .banner-bottom_content {
+    position: absolute;
+    top: 50%;
+    left: 200px;
+    width: 30%;
+    transform: translate(0, -50%);
+
+    .banner-bottom_content_logo {
+      svg {
+        height: 90px;
+        @media only screen and (max-width: 1024px) {
+          height: 72px;
+          width: 180px;
+        }
+        @media only screen and (max-width: 768px) {
+          height: 108px;
+          width: 225px;
+        }
+      }
+    }
+
+    .banner-bottom_content_text {
+      color: $color-light-grey;
+      font-size: 20px;
+      line-height: 30px;
+      margin: 0 0 30px 0;
+      @media only screen and (max-width: 1024px) {
+        font-size: 18px;
+        line-height: 27px;
+        margin: 0 0 21px 0;
+      }
+      @media only screen and (max-width: 768px) {
+        margin: 0 0 36px 0;
+      }
+    }
+    @media only screen and (max-width: 1456px) {
+      left: 90px;
+      width: 40%;
+    }
+    @media only screen and (max-width: 1024px) {
+      left: 75px;
+      width: 48%;
+    }
+    @media only screen and (max-width: 768px) {
+      left: 48px;
+      width: calc(100% - 96px);
+    }
+
+    .btn-outline-white {
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

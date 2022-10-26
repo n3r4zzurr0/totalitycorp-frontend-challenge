@@ -1,0 +1,96 @@
+.banner {
+  position: relative;
+  @media only screen and (max-width: 768px) {
+    max-height: 165vw;
+    overflow: hidden;
+  }
+  @media only screen and (max-width: 558px) {
+    max-height: 180vw;
+  }
+  @media only screen and (max-width: 475px) {
+    max-height: 190vw;
+  }
+  @media only screen and (max-width: 420px) {
+    max-height: 200vw;
+  }
+  @media only screen and (max-width: 400px) {
+    max-height: 210vw;
+  }
+
+  .banner_background {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .banner_content {
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 50%;
+    @media only screen and (max-width: 1024px) {
+      left: 1%;
+      width: 56%;
+    }
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      top: auto;
+      left: 50%;
+      bottom: 48px;
+      transform: translate(-50%, 0);
+      .btn-solid-white {
+        width: calc(100% - 48px);
+        text-align: center;
+      }
+    }
+
+    .banner_content_logo {
+      height: 120px;
+      @media only screen and (max-width: 1300px) {
+        height: 90px;
+      }
+      @media only screen and (max-width: 1150px) {
+        height: 75px;
+      }
+      @media only screen and (max-width: 768px) {
+        width: calc(100vw - 90px);
+        height: auto;
+      }
+    }
+
+    .banner_content_text {
+      font-weight: 700;
+      font-size: 54px;
+      line-height: 60px;
+      color: #fff;
+      width: 100%;
+      padding: 0 60px;
+      margin: 30px 0;
+      text-align: center;
+      @media only screen and (max-width: 1400px) {
+        font-size: 44px;
+        line-height: 54px;
+      }
+      @media only screen and (max-width: 1300px) {
+        font-size: 40px;
+        line-height: 48px;
+        margin: 18px 0 30px;
+      }
+      @media only screen and (max-width: 1150px) {
+        font-size: 33px;
+        line-height: 40px;
+      }
+      @media only screen and (max-width: 768px) {
+        margin: 6px 0 30px;
+        padding: 0 30px;
+        font-size: 36px;
+        line-height: 44px;
+      }
+    }
+  }
+}
