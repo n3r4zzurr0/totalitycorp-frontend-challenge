@@ -2,7 +2,7 @@
 
 Developed as a part of an assignment.
 
-[LIVE](https://n3r4zzurr0.in/totalitycorp-frontend-challenge)
+[**LIVE**](https://n3r4zzurr0.in/totalitycorp-frontend-challenge)
 
 Languages Used: **JavaScript**, **HTML**, **SCSS**
 
